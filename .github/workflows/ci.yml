@@ -47,3 +47,6 @@ jobs:
           scan-ref: "."
           severity: "CRITICAL,HIGH"
           ignore-unfixed: true
+      - name: Build Docker image
+        run: |
+          docker build -t orderflow-backend:ci ./app/backend
